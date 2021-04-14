@@ -1,0 +1,12 @@
+$main-color: #222222;
+$accent-color: #F16D7F;
+$site-width: 1600px;
+$site-inner-width: 1140px;
+
+@function adaptive-exsize($n) {
+    @return $n * 100% / $site-width;
+}
+
+@function adaptive-insize($n) {
+    @return $n * 100% / $site-inner-width;
+}
