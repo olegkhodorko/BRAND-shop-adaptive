@@ -152,14 +152,12 @@ body {
     }
 
     .banner {
-
         &__img {
             min-width: 200px;
-
         }
 
         &__wrapper {
-            height: 80px;           
+            height: 80px;
         }
 
         &__brand {
@@ -168,24 +166,20 @@ body {
 
         &__description {
             font-size: 24px;
-
         }
     }
 }
 
 @media (max-width: 620px) {
-
     .banner {
-
         &__img {
             display: none;
         }
 
         &__wrapper {
-            height: 70px;        
+            height: 70px;
             margin: 148px auto;
         }
-
 
         &__description {
             font-size: 20px;
