@@ -1,4 +1,9 @@
 @import "vars";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+    font-family: "Lato", sans-serif;
+}
 
 .container {
     max-width: $site-width;
@@ -47,9 +52,6 @@
         font-weight: 100;
     }
 
-    &__logo {
-    }
-
     &__search-button {
         margin-left: 40px;
     }
@@ -84,6 +86,55 @@
     }
 }
 
+.banner {
+    display: flex;
+    background: #f1e4e6;
+    &__img {
+        max-width: 800px;
+        min-width: 386px;
+        width: 100%;
+    }
+
+    &__wrapper {
+        height: 80px;
+        margin: adaptive-exsize(280px) adaptive-exsize(100px) 0 adaptive-exsize(60px);
+        border-left: 12px solid $accent-color;
+        padding-left: 15px;
+    }
+
+    &__brand {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+
+    &__description {
+        font-size: 32px;
+        text-transform: uppercase;
+        & > span {
+            color: $accent-color;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        &__wrapper {
+            height: 76px;
+        }
+
+        &__brand {
+            font-size: 37px;
+        }
+
+        &__description {
+            font-size: 24px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .cart-icon,
     .user-icon {
@@ -98,5 +149,46 @@
     }
     .container-inner {
         padding: 0 16px;
+    }
+
+    .banner {
+
+        &__img {
+            min-width: 200px;
+
+        }
+
+        &__wrapper {
+            height: 80px;           
+        }
+
+        &__brand {
+            font-size: 37px;
+        }
+
+        &__description {
+            font-size: 24px;
+
+        }
+    }
+}
+
+@media (max-width: 620px) {
+
+    .banner {
+
+        &__img {
+            display: none;
+        }
+
+        &__wrapper {
+            height: 70px;        
+            margin: 148px auto;
+        }
+
+
+        &__description {
+            font-size: 20px;
+        }
     }
 }
