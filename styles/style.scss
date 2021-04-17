@@ -119,21 +119,48 @@ body {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .banner {
-        &__wrapper {
-            height: 76px;
+.advantages {
+    padding: adaptive-exsize(104px) 0;
+    background: #222224;
+
+    &__items {
+        display: flex;
+        
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
         }
 
-        &__brand {
-            font-size: 37px;
-        }
+    }
 
-        &__description {
-            font-size: 24px;
-        }
+    &__icon {
+        margin-bottom: 20px;
+    }
+
+    &__heading {
+        font-size: 20px;
+        line-height: 24px;    
+        font-weight: normal;   
+        font-style: normal;
+        color: #FBFBFB; 
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        text-align: center;
+
     }
 }
+
+
+
 
 @media (max-width: 768px) {
     .cart-icon,
@@ -166,6 +193,29 @@ body {
 
         &__description {
             font-size: 24px;
+        }
+    }
+
+    .advantages {
+        display: flex;
+        justify-content: center;
+        padding: 48px 0;
+    
+        &__items {
+            flex-wrap: wrap;
+            max-width: 360px;
+            
+        }
+    
+        &__item {
+            margin-right: 0;
+            margin-bottom: 50px;
+
+    
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+    
         }
     }
 }
