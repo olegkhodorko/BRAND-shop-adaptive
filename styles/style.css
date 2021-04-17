@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+input:focus-visible,
+details > summary:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -104,6 +111,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   background: #f1e4e6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .banner__img {
@@ -113,8 +123,7 @@ body {
 }
 
 .banner__wrapper {
-  height: 80px;
-  margin: 17.5% 6.25% 0 3.75%;
+  margin: 0 6.25% 6.25% 3.75%;
   border-left: 12px solid #f16d7f;
   padding-left: 15px;
 }
@@ -174,12 +183,140 @@ body {
   line-height: 24px;
   font-weight: normal;
   font-style: normal;
-  color: #FBFBFB;
+  color: #fbfbfb;
   margin-bottom: 15px;
 }
 
 .advantages__description {
   text-align: center;
+}
+
+.testimonial-subscribe-block {
+  background-image: url(../images/subscription/subscription-back.jpg);
+  background-size: fill;
+  background-position-y: -140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 448px;
+  position: relative;
+}
+
+.testimonial-subscribe-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(244, 244, 244, 0.7);
+  z-index: 0;
+}
+
+.testimonial-subscribe-block__item {
+  text-align: center;
+  max-width: 360px;
+}
+
+.testimonial-subscribe-block__item_left {
+  padding-right: 25px;
+  z-index: 1;
+}
+
+.testimonial-subscribe-block__item_right {
+  padding-left: 25px;
+  min-width: 270px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  z-index: 1;
+}
+
+.testimonial {
+  color: #222224;
+}
+
+.testimonial__photo {
+  border-radius: 50%;
+  max-width: 100px;
+  margin-bottom: 25px;
+}
+
+.testimonial__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.testimonial__text > span {
+  font-style: italic;
+}
+
+.subscribe-form {
+  max-width: 356px;
+}
+
+.subscribe-form__heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: 5px;
+}
+
+.subscribe-form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscribe-form__description {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+}
+
+.subscribe-form__input {
+  height: 50px;
+  -ms-flex-preferred-size: 256px;
+      flex-basis: 256px;
+  border: none;
+  background: #e1e1e1;
+  border-radius: 23px 0 0 23px;
+  padding: 0 22px;
+}
+
+.subscribe-form__button {
+  background: #f16d7f;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 50px;
+  border: none;
+  border-radius: 0 23px 23px 0;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-property: background-color, color, border;
+  transition-property: background-color, color, border;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+.subscribe-form__button:hover {
+  background-color: white;
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
 }
 
 @media (max-width: 768px) {
@@ -197,7 +334,8 @@ body {
     min-width: 200px;
   }
   .banner__wrapper {
-    height: 80px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .banner__brand {
     font-size: 37px;
@@ -226,9 +364,25 @@ body {
   .advantages__item:last-of-type {
     margin-bottom: 0;
   }
+  .testimonial-subscribe-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 140px;
+  }
+  .testimonial-subscribe-block__item_left {
+    padding-right: 0;
+  }
+  .testimonial-subscribe-block__item_right {
+    padding-left: 0;
+    margin-top: 50px;
+  }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 580px) {
   .banner__img {
     display: none;
   }
@@ -238,6 +392,9 @@ body {
   }
   .banner__description {
     font-size: 20px;
+  }
+  .testimonial-subscribe-block {
+    padding-bottom: 110px;
   }
 }
 /*# sourceMappingURL=style.css.map */
