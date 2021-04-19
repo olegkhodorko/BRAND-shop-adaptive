@@ -147,7 +147,7 @@ body {
 
 .advantages {
   padding: 6.5% 0;
-  background: #222224;
+  background: #222222;
 }
 
 .advantages__items {
@@ -319,6 +319,61 @@ body {
   border: 1px solid #f16d7f;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #222222;
+  min-height: 79px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__left {
+  font-size: 16px;
+  line-height: 19px;
+  color: #fbfbfb;
+}
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__icon {
+  margin-left: 8px;
+}
+
+.social-icon {
+  color: #000000;
+  display: block;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 200ms linear, color 200ms linear;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.social-icon:hover {
+  background-color: #f16d7f;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .cart-icon,
   .user-icon {
@@ -395,6 +450,39 @@ body {
   }
   .testimonial-subscribe-block {
     padding-bottom: 110px;
+  }
+  .testimonial-subscribe-block__item {
+    text-align: center;
+    max-width: 360px;
+  }
+  .subscribe-form__description {
+    font-size: 14px;
+  }
+  .testimonial__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .footer {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .footer__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__right {
+    margin: 40px 0;
+  }
+  .footer__icon:first-of-type {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
