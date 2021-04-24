@@ -31,6 +31,7 @@ body {
 }
 
 .main {
+    box-shadow: 0 0 10px 0 gray;
     &__categories {
         margin-top: adaptive-exsize(65px);
     }
@@ -56,8 +57,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     background-color: $main-color;
-    height: 75px;
+    height: $header-height;
     font-size: 26px;
     font-weight: 100;
 
@@ -84,6 +86,26 @@ body {
 
     &__search-button {
         margin-left: 40px;
+    }
+
+    &__menu {
+        position: absolute;
+        top: $header-height;
+        right: 0;
+    }
+}
+
+.menu-icon {
+    & > summary {
+        display: block;
+        margin-right: 33px;
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -489,7 +511,7 @@ body {
 
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 1px 8px 15px 0px rgba(0, 0, 0, 0.74);
+        box-shadow: 1px 8px 15px 0px rgba(0, 0, 0, 0.44);
         transition-timing-function: linear;
     }
 
@@ -561,7 +583,9 @@ body {
         box-sizing: border-box;
         font-size: 14px;
         margin: auto;
-        transition: box-shadow 200ms linear;
+        transition-property: box-shadow;
+        transition-duration: 200ms; 
+        transition-timing-function: linear;
 
         &:hover {
             box-shadow: 0 0 6px 1px white;
@@ -590,6 +614,76 @@ body {
     }
 }
 
+.top-menu {
+    background-color: white;
+    padding: 34px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    min-height: 764px;
+    min-width: 232px;
+    box-sizing: border-box;
+    box-shadow: 0 0 6px 0 gray;
+    z-index: 2;
+
+    &__close-button {
+        font-size: 18px;
+        color: #6f6e6e;
+        font-weight: 100;
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px;
+        transition: color 200ms linear;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__heading {
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__items {
+    }
+
+    &__item {
+        padding: 8px 0;
+    }
+
+    &__item-heading {
+        text-transform: uppercase;
+        color: $accent-color;
+    }
+
+    &__ul {
+        list-style-type: none;
+        text-transform: capitalize;
+        padding: 10px 0;
+        
+    }
+
+    &__list {
+    }
+
+    &__link {
+        color: #6F6E6E;
+        display: block;
+        transition: color 200ms linear;
+        padding: 6px 0 6px 20px;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
 @media (min-width: 1618px) {
     .featured {
         &__item {
@@ -601,7 +695,7 @@ body {
     }
 }
 
-@media (min-width:1072px) and (max-width: 1618px) {
+@media (min-width: 1072px) and (max-width: 1618px) {
     .featured {
         &__item {
             margin-right: 30px;
@@ -612,9 +706,7 @@ body {
     }
 }
 
-
-@media (min-width:767px) and (max-width: 1072px) {
-
+@media (min-width: 767px) and (max-width: 1072px) {
     .featured {
         &__items {
             justify-content: center;
@@ -626,8 +718,6 @@ body {
             }
         }
     }
-
-
 }
 
 @media (max-width: 1072px) {
@@ -653,7 +743,7 @@ body {
         padding: 0 16px;
     }
 }
-@media (min-width:580px) and (max-width:767px) {
+@media (min-width: 580px) and (max-width: 767px) {
     .featured {
         &__items {
             margin-left: 10px;
@@ -663,12 +753,7 @@ body {
     }
 }
 
-
 @media (max-width: 768px) {
-    .cart-icon,
-    .user-icon {
-        display: none !important;
-    }
 
 
     .advantages {
@@ -711,6 +796,18 @@ body {
 }
 
 @media (max-width: 580px) {
+
+    .menu-icon {
+        & > summary {
+            margin-right: 0;
+        }
+    }
+
+    .cart-icon,
+    .user-icon {
+        display: none !important;
+    }
+
     .banner {
         &__img {
             display: none;

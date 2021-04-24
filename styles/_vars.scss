@@ -2,6 +2,7 @@ $main-color: #222222;
 $accent-color: #f16d7f;
 $site-width: 1600px;
 $site-inner-width: 1140px;
+$header-height: 75px;
 
 @function adaptive-exsize($n) {
     @return $n * 100% / $site-width;
