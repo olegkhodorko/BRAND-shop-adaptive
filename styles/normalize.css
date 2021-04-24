@@ -2,9 +2,13 @@
 
 /*Reset styles*/
 
-ul, li, div, nav, h1, h2, h3, h4, h5, h6, p, input, button {
+body, ul, li, div, nav, h1, h2, h3, h4, h5, h6, p, input, button, figure, figcaption {
   margin: 0;
   padding: 0;
+}
+
+input, button, div {
+    min-width: 0;
 }
 
 
@@ -24,13 +28,7 @@ html {
 /* Sections
    ========================================================================== */
 
-/**
- * Remove the margin in all browsers.
- */
 
-body {
-  margin: 0;
-}
 
 /**
  * Render the `main` element consistently in IE.

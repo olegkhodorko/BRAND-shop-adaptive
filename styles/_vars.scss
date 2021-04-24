@@ -1,7 +1,8 @@
 $main-color: #222222;
-$accent-color: #F16D7F;
+$accent-color: #f16d7f;
 $site-width: 1600px;
 $site-inner-width: 1140px;
+$header-height: 75px;
 
 @function adaptive-exsize($n) {
     @return $n * 100% / $site-width;
@@ -9,4 +10,17 @@ $site-inner-width: 1140px;
 
 @function adaptive-insize($n) {
     @return $n * 100% / $site-inner-width;
+}
+
+@keyframes menu-animation {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
 }
