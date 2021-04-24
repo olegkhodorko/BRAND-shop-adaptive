@@ -96,9 +96,14 @@ body {
 }
 
 .menu-icon {
+    &[open] .top-menu {
+        animation: menu-animation 0.5s ease-out both;
+    }
+
     & > summary {
         display: block;
         margin-right: 33px;
+
         &::-webkit-details-marker {
             display: none;
         }
@@ -111,15 +116,10 @@ body {
 
 .logo {
     display: block;
-    &__img {
-    }
 }
 
 .cart-icon {
     position: relative;
-
-    &__img {
-    }
 
     &__number {
         display: flex;
@@ -435,12 +435,6 @@ body {
             }
         }
     }
-
-    &__long-item {
-    }
-
-    &__item-inner {
-    }
 }
 
 .featured {
@@ -569,9 +563,6 @@ body {
         padding: 28px 20px 20px 20px;
     }
 
-    &__to-product-link {
-    }
-
     &__add-to-cart-button {
         position: absolute;
         display: flex;
@@ -584,7 +575,7 @@ body {
         font-size: 14px;
         margin: auto;
         transition-property: box-shadow;
-        transition-duration: 200ms; 
+        transition-duration: 200ms;
         transition-timing-function: linear;
 
         &:hover {
@@ -667,14 +658,13 @@ body {
         list-style-type: none;
         text-transform: capitalize;
         padding: 10px 0;
-        
     }
 
     &__list {
     }
 
     &__link {
-        color: #6F6E6E;
+        color: #6f6e6e;
         display: block;
         transition: color 200ms linear;
         padding: 6px 0 6px 20px;
@@ -754,8 +744,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-
     .advantages {
         display: flex;
         justify-content: center;
@@ -796,7 +784,6 @@ body {
 }
 
 @media (max-width: 580px) {
-
     .menu-icon {
         & > summary {
             margin-right: 0;
@@ -911,6 +898,12 @@ body {
             &_small {
                 margin-right: 0;
             }
+        }
+    }
+
+    .footer {
+        &__left {
+            margin-bottom: 10px;
         }
     }
 }

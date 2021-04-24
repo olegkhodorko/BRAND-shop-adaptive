@@ -1,4 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@-webkit-keyframes menu-animation {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes menu-animation {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
 input:focus-visible,
 details > summary:focus,
 button:focus,
@@ -103,6 +136,11 @@ body {
   position: absolute;
   top: 75px;
   right: 0;
+}
+
+.menu-icon[open] .top-menu {
+  -webkit-animation: menu-animation 0.5s ease-out both;
+          animation: menu-animation 0.5s ease-out both;
 }
 
 .menu-icon > summary {
@@ -780,7 +818,7 @@ body {
 }
 
 .top-menu__link {
-  color: #6F6E6E;
+  color: #6f6e6e;
   display: block;
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
@@ -993,6 +1031,9 @@ body {
   }
   .categories__item_small {
     margin-right: 0;
+  }
+  .footer__left {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
